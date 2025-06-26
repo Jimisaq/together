@@ -1,9 +1,12 @@
 # together_api.py
 
+from dotenv import load_dotenv
+import os
 import requests
 import json
 
-API_KEY = "f2f0eaaeba72d8e6cdabc2e6bc86d8b62c8362e7069479d5a77b931ae9cad339"  # Replace with your actual key
+load_dotenv()
+API_KEY = os.getenv("API_KEY")
 
 HEADERS = {
     "Authorization": f"Bearer {API_KEY}",
